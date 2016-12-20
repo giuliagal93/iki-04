@@ -46,15 +46,20 @@ function draw() {
     fill(220);
     rect(0,0,windowWidth,y);
     
+    // modificare i valori di seguito per rallentare o velocizzare
+    
+    var valDiscesa = 4;
+    var valSalita = 1;
+    
     if (value == true && y < height-10) {
         
-       for(i=0; i < 1 ; i++) {
+       for(i=0; i < valDiscesa ; i++) {
          y = y + 1;
     } 
     
     } else if (value == false && y > 6){
         
-    for(i=0; i < 4 ; i++) {
+    for(i=0; i < valSalita ; i++) {
          y = y - 1;
     } 
         
