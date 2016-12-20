@@ -48,13 +48,13 @@ function draw() {
     
     if (value == true && y < height-10) {
         
-       for(i=0; i < 4 ; i++) {
+       for(i=0; i < 1 ; i++) {
          y = y + 1;
     } 
     
     } else if (value == false && y > 6){
         
-    for(i=0; i < 1 ; i++) {
+    for(i=0; i < 4 ; i++) {
          y = y - 1;
     } 
         
