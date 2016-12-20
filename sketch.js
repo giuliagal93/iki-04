@@ -13,6 +13,14 @@ function mousePressed() {
         value = true;
     } 
 }
+
+function touchStarted() {
+    
+    if(value == false) {
+        value = true;
+    } 
+}
+
  
 function mouseReleased() {
     
@@ -22,6 +30,13 @@ function mouseReleased() {
     
 }
 
+function touchEnded() {
+    
+    if(value == true) {
+        value = false;
+    } 
+    
+}
 
 
 function draw() {
