@@ -2,6 +2,9 @@ var value = false;
 var y = 0;
 var colorbg = 50;
 
+var delta = 0;
+
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
     noStroke();
@@ -9,34 +12,45 @@ function setup() {
 
 function mousePressed() {
     
+    if (mouseY < 600) {
     if(value == false) {
         value = true;
-    } 
-}
-
-function touchStarted() {
+    }} 
+    else if (mouseY > 600){
     
-    if(value == false) {
-        value = true;
-    } 
+      delta = touchX;
+}
 }
 
  
 function mouseReleased() {
-    
+    if (mouseY < 600) {
     if(value == true) {
         value = false;
-    } 
+    } } 
+    else if (mouseY > 600) {
+    
+      delta = touchX - delta;
+//valueX = touchX - valueX;
+
+}
     
 }
 
-function touchEnded() {
-    
-    if(value == true) {
-        value = false;
-    } 
-    
-}
+//function touchStarted() {
+//    
+//    if(value == false) {
+//        value = true;
+//    } 
+//}
+
+//function touchEnded() {
+//    
+//    if(value == true) {
+//        value = false;
+//    } 
+//    
+//}
 
 
 function draw() {
@@ -49,7 +63,14 @@ function draw() {
     // modificare i valori di seguito per rallentare o velocizzare
     
     var valDiscesa = 4;
-    var valSalita = 1;
+    var valSalita = 1 + delta/100;
+          console.log(valSalita)
+
+    if (valSalita < 1){
+        valSalita = 1;
+    }
+    
+
     
     if (value == true && y < height-10) {
         
@@ -68,5 +89,5 @@ function draw() {
     }
 
   
-  
-
+  // Touch within the image to change
+// the value of the rectangle
