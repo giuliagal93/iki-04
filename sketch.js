@@ -10,7 +10,7 @@ function setup() {
     noStroke();
 }
 
-function mousePressed() {
+/*function mousePressed() {
     
     if (mouseY < 600) {
     if(value == false) {
@@ -33,24 +33,34 @@ function mouseReleased() {
       delta = touchX - delta;
 //valueX = touchX - valueX;
 
-}
+}*/
     
 }
 
-//function touchStarted() {
-//    
-//    if(value == false) {
-//        value = true;
-//    } 
-//}
+function touchStarted() {
+   if (mouseY < 600) {
+    if(value == false) {
+        value = true;
+    }} 
+    else if (mouseY > 600){
+    
+      delta = touchX;
+}
+}
 
-//function touchEnded() {
-//    
-//    if(value == true) {
-//        value = false;
-//    } 
-//    
-//}
+function touchEnded() {
+    
+    if (mouseY < 600) {
+    if(value == true) {
+        value = false;
+    } } 
+    else if (mouseY > 600) {
+    
+      delta = touchX - delta;
+//valueX = touchX - valueX;
+
+}
+}
 
 
 function draw() {
