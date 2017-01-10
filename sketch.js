@@ -12,11 +12,11 @@ function setup() {
 
 function mousePressed() {
     
-    if (mouseY < 600) {
+    if (mouseY < height/2) {
     if(value == false) {
         value = true;
     }} 
-    else if (mouseY > 600){
+    else if (mouseY > height/2){
     
       delta = touchX;
 }
@@ -24,11 +24,11 @@ function mousePressed() {
 
  
 function mouseReleased() {
-    if (mouseY < 600) {
+    if (mouseY < height/2) {
     if(value == true) {
         value = false;
     } } 
-    else if (mouseY > 600) {
+    else if (mouseY > height/2) {
     
       delta = touchX - delta;
 //valueX = touchX - valueX;
@@ -38,11 +38,11 @@ function mouseReleased() {
 }
 
 function touchStarted() {
-   if (mouseY < 600) {
+   if (mouseY < height/2) {
     if(value == false) {
         value = true;
     }} 
-    else if (mouseY > 600){
+    else if (mouseY > height/2){
     
       delta = touchX;
 }
@@ -50,11 +50,11 @@ function touchStarted() {
 
 function touchEnded() {
     
-    if (mouseY < 600) {
+    if (mouseY < height/2) {
     if(value == true) {
         value = false;
     } } 
-    else if (mouseY > 600) {
+    else if (mouseY > height/2) {
     
       delta = touchX - delta;
 //valueX = touchX - valueX;
