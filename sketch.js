@@ -10,7 +10,7 @@ function setup() {
     noStroke();
 }
 
-/*function mousePressed() {
+function mousePressed() {
     
     if (mouseY < 600) {
     if(value == false) {
@@ -33,7 +33,7 @@ function mouseReleased() {
       delta = touchX - delta;
 //valueX = touchX - valueX;
 
-}*/
+}
     
 }
 
@@ -67,7 +67,7 @@ function draw() {
     background(colorbg);
     
     noStroke;
-    fill(200);
+    fill(220);
     rect(0,0,windowWidth,y);
     
     // modificare i valori di seguito per rallentare o velocizzare
