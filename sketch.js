@@ -67,7 +67,7 @@ function draw() {
     background(colorbg);
     
     noStroke;
-    fill(220);
+    fill(200);
     rect(0,0,windowWidth,y);
     
     // modificare i valori di seguito per rallentare o velocizzare
