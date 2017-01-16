@@ -1,37 +1,40 @@
 var value = false;
 var y = 0;
-var colorbg = 50;
 var direction = 0;
 var delta = 0;
-
+var a = 0;
+var b = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
     noStroke();
 }
 
+
+
 function touchStarted() {
-    
-    if (mouseY < height/2 && value == false) {
+   if (mouseY < height/2) {
+    if(value == false) {
         value = true;
-    } 
+    }} 
     else if (mouseY > height/2){
-        
+    
       delta = touchX;
 }
 }
 
- 
 function touchEnded() {
+    
     if (mouseY < height/2) {
-        
     if(value == true) {
         value = false;
-    } 
+    } } 
+}
+
+function touchMoved() {
     
-    } else if (mouseY > height/2) {
-    
-      direction = touchX - delta;
+    if (mouseY > height/2) {
+    direction = touchX - delta;
 //      console.log(direction)
       
         if(direction > 0) {
@@ -44,29 +47,27 @@ function touchEnded() {
         
         a = b;
         console.log(b);
-        //delta = touchX;
+        delta = touchX;
     
-}
-
-
+}}
 
 function draw() {
-    background(colorbg);
+    background(141, 178, 162);
     
     noStroke;
-    fill(220);
+    fill(230, 217, 203);
     rect(0,0,windowWidth,y);
     
     // modificare i valori di seguito per rallentare o velocizzare
     
     var valDiscesa = 4;
     var valSalita = 1 + b/10;
-          console.log(valSalita)
+         // console.log(valSalita)
 
-/*    if (valSalita < 1){
+    /*if (valSalita < 1){
         valSalita = 1;
-    }
-    */
+    }*/
+    
 
     
     if (value == true && y < height-10) {
