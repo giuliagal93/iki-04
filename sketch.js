@@ -1,7 +1,7 @@
 var value = false;
 var y = 0;
 var colorbg = 50;
-
+var direction = 0;
 var delta = 0;
 
 
@@ -10,57 +10,44 @@ function setup() {
     noStroke();
 }
 
-function mousePressed() {
+function touchStarted() {
     
-    if (mouseY < height/2) {
-    if(value == false) {
+    if (mouseY < height/2 && value == false) {
         value = true;
-    }} 
+    } 
     else if (mouseY > height/2){
-    
+        
       delta = touchX;
 }
 }
 
  
-function mouseReleased() {
-    if (mouseY < height/2) {
-    if(value == true) {
-        value = false;
-    } } 
-    else if (mouseY > height/2) {
-    
-      delta = touchX - delta;
-//valueX = touchX - valueX;
-
-}
-    
-}
-
-function touchStarted() {
-   if (mouseY < height/2) {
-    if(value == false) {
-        value = true;
-    }} 
-    else if (mouseY > height/2){
-    
-      delta = touchX;
-}
-}
-
 function touchEnded() {
-    
     if (mouseY < height/2) {
+        
     if(value == true) {
         value = false;
-    } } 
-    else if (mouseY > height/2) {
+    } 
     
-      delta = touchX - delta;
+    } else if (mouseY > height/2) {
+    
+      direction = touchX - delta;
+//      console.log(direction)
+      
+        if(direction > 0) {
+            b = a + 0.5
+            } else {
+            b = a - 0.5
 //valueX = touchX - valueX;
 
+        }
+        
+        a = b;
+        console.log(b);
+        //delta = touchX;
+    
 }
-}
+
 
 
 function draw() {
@@ -73,13 +60,13 @@ function draw() {
     // modificare i valori di seguito per rallentare o velocizzare
     
     var valDiscesa = 4;
-    var valSalita = 1 + delta/100;
+    var valSalita = 1 + b/10;
           console.log(valSalita)
 
-    if (valSalita < 1){
+/*    if (valSalita < 1){
         valSalita = 1;
     }
-    
+    */
 
     
     if (value == true && y < height-10) {
