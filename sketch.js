@@ -85,9 +85,9 @@ function draw() {
     var valSalita = 1 + b/30;
          // console.log(valSalita)
 
-    if (valSalita < 1){
+    /*if (valSalita < 1){
         valSalita = 0.1;
-    }
+    }*/
     
     var tempo = anno - b*5;
     
