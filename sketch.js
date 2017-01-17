@@ -101,7 +101,7 @@ function draw() {
     textAlign(CENTER);
     text(tempo,width/2,7.5*height/8+4)
     
-    if (value == true && y < height-(7*height/8+50){
+    if (value == true && y < height-(7*height/8)-10{
         
        for(i=0; i < valDiscesa ; i++){
         
