@@ -81,7 +81,7 @@ function draw() {
     colorMode(RGB);
     // modificare i valori di seguito per rallentare o velocizzare
     
-    var valDiscesa = 4;
+    var valDiscesa = 3;
     var valSalita = 1 + b/90;
          // console.log(valSalita)
 
