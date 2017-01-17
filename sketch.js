@@ -82,7 +82,7 @@ function draw() {
     // modificare i valori di seguito per rallentare o velocizzare
     
     var valDiscesa = 4;
-    var valSalita = 1 + b/50;
+    var valSalita = 1 + b/100;
          // console.log(valSalita)
 
     /*if (valSalita < 1){
