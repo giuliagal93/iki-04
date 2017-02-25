@@ -10,7 +10,7 @@ var value = 0;
 var direction = 0;
 var a = 0;
 var b = 0;
-var tempo;
+
 var anno = 2017;
 
 function draw() {
@@ -32,7 +32,7 @@ function draw() {
 
     colorMode(RGB);
 
-    tempo = anno - b * 5;
+    var tempo = anno - b * 5;
 
     /*if (tempo > 2400) {
         tempo = 2400;
@@ -44,7 +44,6 @@ function draw() {
     textAlign(CENTER);
     text(tempo, width / 2, 7.5 * height / 8 + 4)
 
-    
 }
 
 function touchStarted() {
@@ -55,7 +54,7 @@ function touchMoved() {
 
     if (touchY > (7 * height) / 8) {
         direction = touchX - value;
-       // console.log(value)
+        console.log(value)
         if (direction > 0) {
             b = a + 1
         } else {
@@ -66,11 +65,10 @@ function touchMoved() {
         }
         a = b;
 
-       // console.log(b);
+        console.log(b);
         value = touchX;
 
     }
-    
     
     drawTrees();
 }
@@ -81,48 +79,7 @@ function drawTrees() {
     for (var x = 0; x < width; x += 5) {
         for (var y = 0; y < height; y += 5) {
 
-        tempo = anno - b * 5;
-           
-
-    /*    if ( tempo == 2017) {
-          
-        fill(121,165,104)
-        } else if (tempo == 2002) {
-          
-          fill(166,189,122);
-        } else if (tempo == 2042) {
-          fill(90,134,97);
-        }
-        else {
-          fill(0); 
-        }*/
-        
-        var scuro = map(tempo,0,1800,100,0);
-        
-        var chiaro = map(tempo,600,2400,0,100);
-        
-        var medio1 = map(tempo,0,1200,0,50);
-
-        var medio2 = map(tempo,1200,2400,50,0);
-
-        if(random()< scuro /100) {
-          
-          fill(90, 134, 97)
-        } 
-          
-           
-        if(random()< chiaro /100) {
-          fill(166, 189, 122)
-        } 
-         
-     if(tempo < 1200 && random()< medio1 /100) {
-          fill(121,165,104)
-        } else if (tempo >= 1200 && random()< medio2 /100) {
-          fill(121,165,104)
-        } 
-
-  
-            /*if (b >= 0) {
+            if (b >= 0) {
                 if (random() < (b + 1) / 100) {
                     fill(121, 164, 104);
                 }
@@ -152,7 +109,7 @@ function drawTrees() {
                     fill(166, 189, 122);
 
                 }
-            }*/
+            }
 
 
 
