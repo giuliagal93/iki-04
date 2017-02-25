@@ -1,7 +1,4 @@
-# respiro01
-
-
-IKI
+# IKI
 
 
 Deforestation is a key problem in our society, but it’s not always perceived as important as it really is.
