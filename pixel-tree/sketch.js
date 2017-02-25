@@ -97,13 +97,13 @@ function drawTrees() {
           fill(0); 
         }*/
         
-        var scuro = map(tempo,0,1800,100,0);
+        var scuro = map(tempo,0,2400,100,0);
         
-        var chiaro = map(tempo,600,2400,0,100);
+        var chiaro = map(tempo,0,2400,0,100);
         
-        var medio1 = map(tempo,0,1200,0,50);
+        var medio1 = map(tempo,0,1200,0,33);
 
-        var medio2 = map(tempo,1200,2400,50,0);
+        var medio2 = map(tempo,1200,2400,33,0);
 
         if(random()< scuro /100) {
           
