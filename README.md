@@ -1,9 +1,6 @@
 # respiro01
 
 
-
-<!--
-
 IKI
 
 
@@ -19,5 +16,3 @@ We also added a more informative section where the user visually sees the change
 One of the problems while coding the app was figuring out how to time the movement of the oxygen “tank”, in order to make it more flowing as possible. 
 Secondly, we had some difficulties with the pixel-trees part, because in the beginning we worked with random functions and then we had to switch to working with percentage and proportion: while the theoric reasoning was clear, it was hard to translate it into code with the remapping function.
 In general, the biggest challenge was figuring out how to put together the different pieces of code and work out how to transform our ideas into functions and variables.
-
--->
